@@ -18,8 +18,8 @@ class DoisD:
         return [[sx,0,0],[0,sy,0],[0,0,1]]
     
     def getMatrizR(ang):
-        return [[math.cos(ang), -math.sin(ang), 0],
-        [math.sin(ang),math.cos(ang),0],[0,0,1]]
+        return [[math.degrees(math.cos(ang)), -math.degrees(math.sin(ang)), 0],
+        [math.degrees(math.sin(ang)),math.degrees(math.cos(ang)),0],[0,0,1]]
 
 class TresD:
     def getMatrizT(tx, ty, tz):
@@ -29,16 +29,16 @@ class TresD:
         return [[sx,0,0,0],[0,sy,0,0],[0,0,sz,0],[0,0,0,1]]
     
     def getMatrizRZ(ang):
-        return [[math.cos(ang), -math.sin(ang), 0,0],
-        [math.sin(ang),math.cos(ang),0,0],[0,0,1,0],[0,0,0,1]]
+        return [[math.degrees(math.cos(ang)), -math.degrees(math.sin(ang)), 0,0],
+        [math.degrees(math.sin(ang)),math.degrees(math.cos(ang)),0,0],[0,0,1,0],[0,0,0,1]]
     
     def getMatrizRX(ang):
-        return [[1,0,0,0],[0,math.cos(ang), -math.sin(ang), 0],
-        [0,math.sin(ang),math.cos(ang),0],[0,0,0,1]]
+        return [[1,0,0,0],[0,math.degrees(math.cos(ang)), -math.degrees(math.sin(ang)), 0],
+        [0,math.degrees(math.degrees(math.sin(ang)),math.cos(ang)),0],[0,0,0,1]]
     
     def getMatrizRY(ang):
-        return [[math.cos(ang),0, math.sin(ang), 0],
-        [0,1,0,0],[math.sin(ang),0,math.cos(ang),0],[0,0,0,1]]
+        return [[math.degrees(math.cos(ang)),0, math.degrees(math.sin(ang)), 0],
+        [0,1,0,0],[math.degrees(math.sin(ang)),0,math.degrees(math.cos(ang)),0],[0,0,0,1]]
     
     def getMatrizRX(b,c,d):
         return [[1,0,0,0],[0,c/d,-b/d,0],[0,b/d,c/d,0],[0,0,0,1]]
